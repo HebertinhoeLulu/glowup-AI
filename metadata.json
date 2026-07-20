@@ -1,0 +1,6 @@
+{
+  "name": "GlowUp AI",
+  "description": "Analise seu rosto em mais de 100 métricas cientificamente fundamentadas e acompanhe sua evolução facial com inteligência artificial.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

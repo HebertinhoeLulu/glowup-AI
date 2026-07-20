@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #131315;
+  --color-surface: #131315;
+  --color-surface-dim: #131315;
+  --color-surface-bright: #39393b;
+  --color-surface-container-lowest: #0e0e10;
+  --color-surface-container-low: #1b1b1d;
+  --color-surface-container: #1f1f21;
+  --color-surface-container-high: #2a2a2c;
+  --color-surface-container-highest: #353437;
+  --color-on-surface: #e4e2e4;
+  --color-on-surface-variant: #ccc3d8;
+  --color-inverse-surface: #e4e2e4;
+  --color-inverse-on-surface: #303032;
+  --color-outline: #958da1;
+  --color-outline-variant: #4a4455;
+  
+  --color-primary: #d2bbff;
+  --color-on-primary: #3f008e;
+  --color-primary-container: #7c3aed;
+  --color-on-primary-container: #ede0ff;
+  
+  --color-electric-violet: #7C3AED;
+  --color-deep-blue: #0055FF;
+  --color-graphite-dark: #121212;
+  --color-graphite-surface: #1C1C1E;
+  --color-data-cyan: #00F5FF;
+  --color-pure-white: #FFFFFF;
+  --color-muted-text: #8E8E93;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display-xl: "Manrope", sans-serif;
+  --font-title-md: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --animate-spin-slow: spin 10s linear infinite;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #131315;
+    color: #e4e2e4;
+    font-family: var(--font-sans);
+    overscroll-behavior-y: none;
+  }
+}
+
+/* Custom layout safe area paddings */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Custom laser scanning animations */
+@keyframes scan {
+  0%, 100% {
+    top: 0%;
+    opacity: 0.9;
+  }
+  50% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+/* Custom button sliding shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Utility classes to match key requirements */
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
